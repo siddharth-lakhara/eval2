@@ -27,7 +27,8 @@ module.exports = [{
 						});
 						responseInner.on('end', ()=>{
 							ratingObject = JSON.parse(ratingString);
-							console.log(ratingObject);
+							jsonObject.books[books]['rating'] = ratingObject.rating;
+							console.log(jsonObject.books);
 						});
 					});
 					// jsonObject.books[books]["ratings"] = valueFromAPI2

@@ -11,6 +11,15 @@ module.exports = {
       author: {
         type: Sequelize.STRING
       },
+      id: {
+        type: Sequelize.INT
+      },
+      name: {
+        type: Sequelize.STRING
+      },
+      rating: {
+        type: Sequelize.FLOAT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

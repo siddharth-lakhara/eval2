@@ -10,8 +10,8 @@ module.exports = {
 			if (result === null){ // create object
 				Models.book.create({
           name: bookName.name;
-          author: bookName.name;
-          rating: bookName.name;
+          author: bookName.author;
+          rating: bookName.rating;
 				}).
 					then(()=>{
 						reply({
@@ -20,10 +20,15 @@ module.exports = {
 						});
 					});
 			}else{
-				reply({
-					data:'New object created and value updated',
-					statusCode: 200
-				});
+        Models.book.update({
+          
+        }).then(()=>{
+          reply({
+  					data:'New object created and value updated',
+  					statusCode: 200
+  				});
+        });
+
 			}
 
 			reply('Done');
